@@ -1,4 +1,4 @@
-import axios from 'axios';
+import axios from 'axios'
 
 const api = axios.create({
   baseURL: 'https://api.countrystatecity.in/v1',
@@ -7,4 +7,4 @@ const api = axios.create({
   },
 })
 
-export default api;
+export default api

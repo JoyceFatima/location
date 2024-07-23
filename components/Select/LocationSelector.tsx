@@ -1,71 +1,88 @@
 // /src/components/LocationSelector.tsx
 
-import { useState, useEffect } from 'react';
-import { useForm, Controller } from 'react-hook-form';
-import { FormControl, InputLabel, MenuItem, Select, Container, Box, Button } from '@mui/material';
-import data from '../../public/data.json';
+import { useState, useEffect } from 'react'
+import { useForm, Controller } from 'react-hook-form'
+import {
+  FormControl,
+  InputLabel,
+  MenuItem,
+  Select,
+  Container,
+  Box,
+  Button,
+} from '@mui/material'
+import data from '../../public/data.json'
 
 interface FormValuesLocationSelector {
-  country: string;
-  state: string;
-  city: string;
-}
-
-interface Country {
-  name: string;
-  iso2: string;
-  states: State[];
+  country: string
+  state: string
+  city: string
 }
 
 interface State {
-  name: string;
-  iso2: string;
-  cities: string[];
+  name: string
+  iso2: string
+  cities: string[]
+}
+
+interface Country {
+  name: string
+  iso2: string
+  states: State[]
 }
 
 interface LocationSelectorProps {
-  onSubmit: (data: FormValuesLocationSelector) => void;
+  onSubmit: (data: FormValuesLocationSelector) => void
 }
 
-export const LocationSelector: React.FC<LocationSelectorProps> = ({ onSubmit }) => {
-  const { control, handleSubmit, watch, setValue, reset } = useForm<FormValuesLocationSelector>();
-  const [countries, setCountries] = useState<Country[]>([]);
-  const [states, setStates] = useState<State[]>([]);
-  const [cities, setCities] = useState<string[]>([]);
+export const LocationSelector: React.FC<LocationSelectorProps> = ({
+  onSubmit,
+}) => {
+  const { control, handleSubmit, watch, setValue, reset } =
+    useForm<FormValuesLocationSelector>()
+  const [countries, setCountries] = useState<Country[]>([])
+  const [states, setStates] = useState<State[]>([])
+  const [cities, setCities] = useState<string[]>([])
 
-  const selectedCountry = watch('country');
-  const selectedState = watch('state');
+  const selectedCountry = watch('country')
+  const selectedState = watch('state')
 
   useEffect(() => {
-    setCountries(data.countries);
-  }, []);
+    setCountries(data.countries)
+  }, [])
 
   useEffect(() => {
     if (selectedCountry) {
-      const selectedCountryData = countries.find(c => c.iso2 === selectedCountry);
-      setStates(selectedCountryData ? selectedCountryData.states : []);
-      setCities([]);
-      setValue('state', '');
-      setValue('city', '');
+      const selectedCountryData = countries.find(
+        (c) => c.iso2 === selectedCountry,
+      )
+      setStates(selectedCountryData ? selectedCountryData.states : [])
+      setCities([])
+      setValue('state', '')
+      setValue('city', '')
     }
-  }, [selectedCountry, countries, setValue]);
+  }, [selectedCountry, countries, setValue])
 
   useEffect(() => {
     if (selectedState) {
-      const selectedStateData = states.find(s => s.iso2 === selectedState);
-      setCities(selectedStateData ? selectedStateData.cities : []);
-      setValue('city', '');
+      const selectedStateData = states.find((s) => s.iso2 === selectedState)
+      setCities(selectedStateData ? selectedStateData.cities : [])
+      setValue('city', '')
     }
-  }, [selectedState, states, setValue]);
+  }, [selectedState, states, setValue])
 
   const handleFormSubmit = (data: FormValuesLocationSelector) => {
-    onSubmit(data);
-    reset();
-  };
+    onSubmit(data)
+    reset()
+  }
 
   return (
     <Container maxWidth="sm">
-      <Box sx={{ mt: 4 }} component="form" onSubmit={handleSubmit(handleFormSubmit)}>
+      <Box
+        sx={{ mt: 4 }}
+        component="form"
+        onSubmit={handleSubmit(handleFormSubmit)}
+      >
         <FormControl fullWidth margin="normal">
           <InputLabel id="country-label">Pais</InputLabel>
           <Controller
@@ -85,7 +102,7 @@ export const LocationSelector: React.FC<LocationSelectorProps> = ({ onSubmit }) 
                   },
                 }}
               >
-                {countries.map(country => (
+                {countries.map((country) => (
                   <MenuItem key={country.iso2} value={country.iso2}>
                     {country.name}
                   </MenuItem>
@@ -114,7 +131,7 @@ export const LocationSelector: React.FC<LocationSelectorProps> = ({ onSubmit }) 
                   },
                 }}
               >
-                {states.map(state => (
+                {states.map((state) => (
                   <MenuItem key={state.iso2} value={state.iso2}>
                     {state.name}
                   </MenuItem>
@@ -143,7 +160,7 @@ export const LocationSelector: React.FC<LocationSelectorProps> = ({ onSubmit }) 
                   },
                 }}
               >
-                {cities.map(city => (
+                {cities.map((city) => (
                   <MenuItem key={city} value={city}>
                     {city}
                   </MenuItem>
@@ -160,5 +177,5 @@ export const LocationSelector: React.FC<LocationSelectorProps> = ({ onSubmit }) 
         </Box>
       </Box>
     </Container>
-  );
+  )
 }
