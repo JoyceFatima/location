@@ -1,0 +1,36 @@
+{
+  "countries": [
+    {
+      "name": "United States",
+      "iso2": "US",
+      "states": [
+        {
+          "name": "California",
+          "iso2": "CA",
+          "cities": ["Los Angeles", "San Francisco", "San Diego"]
+        },
+        {
+          "name": "Texas",
+          "iso2": "TX",
+          "cities": ["Houston", "Dallas", "Austin"]
+        }
+      ]
+    },
+    {
+      "name": "Canada",
+      "iso2": "CA",
+      "states": [
+        {
+          "name": "Ontario",
+          "iso2": "ON",
+          "cities": ["Toronto", "Ottawa", "Mississauga"]
+        },
+        {
+          "name": "Quebec",
+          "iso2": "QC",
+          "cities": ["Montreal", "Quebec City", "Laval"]
+        }
+      ]
+    }
+  ]
+}
