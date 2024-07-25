@@ -1,38 +1,105 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+Aqui está o README atualizado com a informação sobre a fonte de dados utilizada:
 
-## Getting Started
+---
 
-First, run the development server:
+# Projeto Next.js
+
+Este é um projeto [Next.js](https://nextjs.org/) iniciado com [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+
+## Visão Geral do Projeto 🚀
+
+Este projeto utiliza as seguintes tecnologias incríveis:
+
+- **Next.js**: Um poderoso framework React para produção.
+- **TypeScript**: Para desenvolvimento JavaScript com segurança de tipos.
+- **Tailwind CSS**: Um framework CSS utility-first para desenvolvimento rápido de UI.
+- **Axios**: Um cliente HTTP baseado em promessas para o navegador e Node.js.
+- **Material-UI**: Um popular framework de UI para React.
+
+## Estrutura do Projeto 📂
+
+A estrutura do projeto é a seguinte:
+
+```
+app
+|-- globals.css
+|-- layout.tsx
+|-- page.tsx
+components
+config
+node_modules
+public
+|-- data.json
+.eslintignore
+.eslintrc.json
+.gitignore
+next.config.mjs
+package.json
+package-lock.json
+postcss.config.mjs
+README.md
+tailwind.config.ts
+tsconfig.json
+```
+
+## Começando 🚀
+
+Primeiro, execute o servidor de desenvolvimento:
 
 ```bash
 npm run dev
-# or
+# ou
 yarn dev
-# or
+# ou
 pnpm dev
-# or
+# ou
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Abra [http://localhost:3000](http://localhost:3000) com o seu navegador para ver o resultado. 🎉
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Você pode começar a editar a página modificando `app/page.tsx`. A página atualiza automaticamente conforme você edita o arquivo. 🔄
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Saiba Mais 📚
 
-## Learn More
+Para saber mais sobre Next.js, confira os seguintes recursos:
 
-To learn more about Next.js, take a look at the following resources:
+- [Documentação do Next.js](https://nextjs.org/docs) - aprenda sobre as funcionalidades e API do Next.js.
+- [Aprenda Next.js](https://nextjs.org/learn) - um tutorial interativo de Next.js.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Você pode conferir o [repositório GitHub do Next.js](https://github.com/vercel/next.js/) - seu feedback e contribuições são bem-vindos! 😊
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Deploy no Vercel 🚀
 
-## Deploy on Vercel
+A maneira mais fácil de fazer deploy do seu app Next.js é usar a [Plataforma Vercel](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) dos criadores do Next.js.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Confira nossa [documentação de deploy do Next.js](https://nextjs.org/docs/deployment) para mais detalhes.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
-# location
-# location
+## Funcionalidade: Seleção Cascata para Localização 🌍
+
+Este projeto inclui uma funcionalidade que permite aos usuários selecionar um país, em seguida um estado associado, e finalmente uma cidade. Isso é implementado usando ReactJS/NextJS com Material-UI para os componentes de UI.
+
+### Implementação da Funcionalidade
+
+- **Seleção de País**: Usuários podem selecionar um país de uma lista dropdown.
+- **Seleção de Estado**: Com base no país selecionado, o próximo dropdown lista os estados daquele país.
+- **Seleção de Cidade**: Com base no estado selecionado, o dropdown final lista as cidades daquele estado.
+
+### Fonte de Dados
+
+Os dados para países, estados e cidades são fornecidos pela [API Countries Now](https://countriesnow.space/api/v0.1).
+
+### Bibliotecas Utilizadas
+
+- **Material-UI**: Para o framework de CSS e componentes de UI.
+- **Axios**: Para buscar dados de uma API ou arquivo JSON local.
+
+### Tempo de Desenvolvimento
+
+- **Fase Atual**: A fase atual do projeto levou aproximadamente 4 horas para ser concluída.
+
+Com esta configuração, você pode gerenciar eficientemente seleções em cascata para países, estados e cidades usando React, Next.js e Material-UI. 🎉
+
+---
+
+Esta atualização inclui a quantidade de horas gastas na fase atual do projeto e a fonte de dados utilizada.
