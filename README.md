@@ -96,10 +96,8 @@ Os dados para países, estados e cidades são fornecidos pela [API Countries Now
 
 ### Tempo de Desenvolvimento
 
-- **Fase Atual**: A fase atual do projeto levou aproximadamente 4 horas para ser concluída.
+- **Fase Atual**: A fase atual do projeto levou aproximadamente 6 horas para ser concluída. Esse tempo incluiu a configuração inicial do projeto, a busca e integração com a API, além da montagem e estilização dos componentes. O tempo foi necessário para garantir que todos os componentes funcionassem corretamente e estivessem devidamente integrados e testados.
 
 Com esta configuração, você pode gerenciar eficientemente seleções em cascata para países, estados e cidades usando React, Next.js e Material-UI. 🎉
 
 ---
-
-Esta atualização inclui a quantidade de horas gastas na fase atual do projeto e a fonte de dados utilizada.
